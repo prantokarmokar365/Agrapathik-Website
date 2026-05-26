@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activities &amp; Projects - Agrapathik</title>
+  <meta name="description" content="Explore Agrapathik's ongoing and completed community projects across environment, education, food security, health, and emergency response." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-round.png" />
+  <style>
+    /* Move small page-specific style out of inline attribute */
+    .section-label--green{ color:var(--green-400); }
+  </style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/agrapathik_logo.jpeg" alt="Agrapathik Logo" class="nav-logo-img"><span class="nav-logo-text">Agrapathik</span></a>
+    <ul class="nav-links"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="activities.html" class="nav-link">Activities</a></li><li><a href="events.html" class="nav-link">Events</a></li><li><a href="volunteer.html" class="nav-link">Volunteer</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+    <div class="nav-cta"><a href="volunteer.html" class="btn btn-primary btn-sm">Join Us</a></div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container"><div class="page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg><span>Activities</span></nav>
+    <div class="page-hero-label">What We Do</div>
+    <h1 class="page-hero-title">Our Activities &amp; Projects</h1>
+    <p class="page-hero-desc">From animal welfare to youth sports and family livelihood support, every program on this page moves our mission forward. Open any activity card to view photos from that initiative.</p>
+  </div></div>
+</section>
+
+<!-- FILTER + PROJECTS -->
+<section class="section" id="activity-galleries">
+  <div class="container">
+    <div class="filter-btns" data-target="projects-grid">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="animal">Animal Welfare</button>
+      <button class="filter-btn" data-filter="sports">Youth &amp; Sports</button>
+      <button class="filter-btn" data-filter="livelihood">Livelihood</button>
+      <button class="filter-btn" data-filter="food">Food Security</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="disaster">Disaster Relief</button>
+    </div>
+    <p class="activity-gallery-note">Click any activity card to open a photo gallery for that project.</p>
+
+    <div class="projects-grid" id="projects-grid">
+      <article class="card activity-card reveal delay-1" data-category="animal">
+        <div class="card-img-wrap"><img class="card-img" src="assets/images/activity_street_dogs.jpg" alt="Agrapathik volunteers feeding street dogs" loading="lazy" /><div class="card-badge">Featured</div></div>
+        <div class="card-body">
+          <div class="card-tag">Animal Welfare</div>
+          <h3 class="card-title">Street Dog Feeding Initiative</h3>
+          <p class="card-desc">With support from Mohiuddin Roni bhai, Agrapathik volunteers brought food to street dogs in Bangladesh, turning a small act of care into a reminder that hunger affects both people and animals.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">Food</div><div class="card-stat-label">Shared With Street Dogs</div></div>
+            <div class="card-stat"><div class="card-stat-value">1 Reel</div><div class="card-stat-label">Activity Story</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Mohiuddin Roni Support</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Facebook Reel</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this activity's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="street-dogs-gallery">View photo</button></div>
+          <div class="activity-gallery" id="street-dogs-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_street_dogs.jpg" data-lightbox-alt="Agrapathik volunteers feeding street dogs during an animal welfare initiative"><img src="assets/images/activity_street_dogs.jpg" alt="Agrapathik volunteers feeding street dogs during an animal welfare initiative" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card activity-card reveal delay-2" data-category="sports">
+        <div class="card-img-wrap"><img class="card-img" src="assets/images/activity_sprinters_jersey.jpg" alt="Agrapathik with Team Sprinters during a jersey unveiling" loading="lazy" /><div class="card-badge">Youth</div></div>
+        <div class="card-body">
+          <div class="card-tag">Youth &amp; Sports</div>
+          <h3 class="card-title">Sprinters Sports Club Support</h3>
+          <p class="card-desc">Agrapathik stands beside youth empowerment through sports, joining Team Sprinters' jersey unveiling and recognizing Sprinters Sports Club for their passion, dedication, and contribution.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">2</div><div class="card-stat-label">Activity Posts</div></div>
+            <div class="card-stat"><div class="card-stat-value">1</div><div class="card-stat-label">Club Supported</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Sprinters Sports Club</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Jersey Unveiling</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this activity's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="sprinters-gallery">View 6 photos</button></div>
+          <div class="activity-gallery" id="sprinters-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_jersey.jpg" data-lightbox-alt="Agrapathik representatives with Team Sprinters during the jersey unveiling"><img src="assets/images/activity_sprinters_jersey.jpg" alt="Agrapathik representatives with Team Sprinters during the jersey unveiling" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_jersey_2.jpg" data-lightbox-alt="Team Sprinters players posing together with a football"><img src="assets/images/activity_sprinters_jersey_2.jpg" alt="Team Sprinters players posing together with a football" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_jersey_3.jpg" data-lightbox-alt="Team Sprinters players wearing their new jerseys"><img src="assets/images/activity_sprinters_jersey_3.jpg" alt="Team Sprinters players wearing their new jerseys" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_jersey_4.jpg" data-lightbox-alt="Agrapathik branding on a Team Sprinters jersey"><img src="assets/images/activity_sprinters_jersey_4.jpg" alt="Agrapathik branding on a Team Sprinters jersey" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_appreciation.jpg" data-lightbox-alt="Agrapathik recognizing Sprinters Sports Club with a token of appreciation"><img src="assets/images/activity_sprinters_appreciation.jpg" alt="Agrapathik recognizing Sprinters Sports Club with a token of appreciation" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_sprinters_appreciation_2.jpg" data-lightbox-alt="Team Sprinters group photo from the appreciation post"><img src="assets/images/activity_sprinters_appreciation_2.jpg" alt="Team Sprinters group photo from the appreciation post" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card activity-card reveal delay-3" data-category="livelihood">
+        <div class="card-img-wrap"><img class="card-img" src="assets/images/activity_livelihood_reel.jpg" alt="Agrapathik livelihood support for a family" loading="lazy" /><div class="card-badge">Ramadan</div></div>
+        <div class="card-body">
+          <div class="card-tag">Livelihood Support</div>
+          <h3 class="card-title">Family Self-Reliance Initiative</h3>
+          <p class="card-desc">During Ramadan, Agrapathik used community support to help an underprivileged family build a dignified path to daily livelihood, proving that small steps can create lasting change.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">1</div><div class="card-stat-label">Family Supported</div></div>
+            <div class="card-stat"><div class="card-stat-value">2</div><div class="card-stat-label">Activity Stories</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Community Support</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Self-Reliance</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this activity's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="livelihood-gallery">View 3 photos</button></div>
+          <div class="activity-gallery" id="livelihood-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_livelihood_family_1.jpg" data-lightbox-alt="Agrapathik helping create employment for a family"><img src="assets/images/activity_livelihood_family_1.jpg" alt="Agrapathik helping create employment for a family" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_livelihood_family_2.jpg" data-lightbox-alt="Agrapathik livelihood support handover with the family"><img src="assets/images/activity_livelihood_family_2.jpg" alt="Agrapathik livelihood support handover with the family" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/activity_livelihood_reel.jpg" data-lightbox-alt="Agrapathik volunteers speaking with a family during a livelihood support initiative"><img src="assets/images/activity_livelihood_reel.jpg" alt="Agrapathik volunteers speaking with a family during a livelihood support initiative" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card activity-card reveal delay-1" data-category="food">
+        <div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Food distribution volunteers" loading="lazy" /><div class="card-badge">Seasonal</div></div>
+        <div class="card-body">
+          <div class="card-tag">Food Security</div>
+          <h3 class="card-title">Community Food Distribution Program</h3>
+          <p class="card-desc">During Ramadan, Eid, and disaster periods, we coordinate large-scale food distribution drives that reach thousands of families in low-income communities across Bangladesh.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">12,000</div><div class="card-stat-label">Families Fed</div></div>
+            <div class="card-stat"><div class="card-stat-value">45 t</div><div class="card-stat-label">Food Distributed</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>600+ Volunteers</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>12 Cities</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this project's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="food-gallery">View 3 photos</button></div>
+          <div class="activity-gallery" id="food-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200&q=80" data-lightbox-alt="Volunteers handing out food packages to community members"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Volunteers handing out food packages to community members" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1593113630400-ea4288922497?w=1200&q=80" data-lightbox-alt="Volunteers packing food donations at a warehouse table"><img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?w=800&q=80" alt="Volunteers packing food donations at a warehouse table" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1609132718484-cc90df3417f8?w=1200&q=80" data-lightbox-alt="Aid boxes arranged for community food distribution"><img src="https://images.unsplash.com/photo-1609132718484-cc90df3417f8?w=800&q=80" alt="Aid boxes arranged for community food distribution" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card activity-card reveal delay-2" data-category="health">
+        <div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Free health camp doctors" loading="lazy" /><div class="card-badge">Quarterly</div></div>
+        <div class="card-body">
+          <div class="card-tag">Health</div>
+          <h3 class="card-title">Free Health Camps &amp; Checkups</h3>
+          <p class="card-desc">Partnering with medical colleges and volunteer doctors, we run quarterly health camps providing consultations, medicines, blood tests, and preventative screenings to underserved communities.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">8,500</div><div class="card-stat-label">Patients Served</div></div>
+            <div class="card-stat"><div class="card-stat-value">32</div><div class="card-stat-label">Camps Held</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>280 Doctors</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Quarterly</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this project's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="health-gallery">View 3 photos</button></div>
+          <div class="activity-gallery" id="health-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80" data-lightbox-alt="Doctors and patients during a free community health camp"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Doctors and patients during a free community health camp" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&q=80" data-lightbox-alt="Medical workers consulting patients during an outreach clinic"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80" alt="Medical workers consulting patients during an outreach clinic" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1576765607924-dcecab4c2e56?w=1200&q=80" data-lightbox-alt="Healthcare staff preparing medical supplies for a camp"><img src="https://images.unsplash.com/photo-1576765607924-dcecab4c2e56?w=800&q=80" alt="Healthcare staff preparing medical supplies for a camp" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card activity-card reveal delay-3" data-category="disaster">
+        <div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1550159930-40066082a4fc?w=800&q=80" alt="Disaster relief volunteers" loading="lazy" /><div class="card-badge">On-Demand</div></div>
+        <div class="card-body">
+          <div class="card-tag">Disaster Relief</div>
+          <h3 class="card-title">Flood &amp; Cyclone Emergency Response</h3>
+          <p class="card-desc">Our rapid-response team deploys within 24 hours of major disasters to provide shelter kits, clean drinking water, food parcels, and first-response support to affected families.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="card-stat-value">18</div><div class="card-stat-label">Deployments</div></div>
+            <div class="card-stat"><div class="card-stat-value">6,200</div><div class="card-stat-label">People Helped</div></div>
+          </div>
+          <div class="card-meta"><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>350 Responders</div><div class="card-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>24-hr Response</div></div>
+          <div class="activity-card-prompt"><p class="activity-card-note">Click to open this project's photo gallery.</p><button class="activity-card-toggle" type="button" aria-expanded="false" aria-controls="disaster-gallery">View 3 photos</button></div>
+          <div class="activity-gallery" id="disaster-gallery" aria-hidden="true">
+            <div class="activity-gallery-grid">
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1550159930-40066082a4fc?w=1200&q=80" data-lightbox-alt="Relief volunteers carrying emergency supplies after a disaster"><img src="https://images.unsplash.com/photo-1550159930-40066082a4fc?w=800&q=80" alt="Relief volunteers carrying emergency supplies after a disaster" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="assets/images/team_photo.png" data-lightbox-alt="Agrapathik team coordinating field operations together"><img src="assets/images/team_photo.png" alt="Agrapathik team coordinating field operations together" loading="lazy" /></button>
+              <button class="activity-gallery-item" type="button" data-lightbox-src="https://images.unsplash.com/photo-1609132718484-cc90df3417f8?w=1200&q=80" data-lightbox-alt="Essential aid packages ready for emergency distribution"><img src="https://images.unsplash.com/photo-1609132718484-cc90df3417f8?w=800&q=80" alt="Essential aid packages ready for emergency distribution" loading="lazy" /></button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close image">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img class="lightbox-img" src="" alt="" />
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container"><div class="cta-inner reveal">
+    <div class="section-label section-label--green">Get Involved</div>
+    <h2 class="cta-title">Want to Support a Project?</h2>
+    <p class="cta-desc">Volunteer your time, donate resources, or partner with us. Every form of support moves Bangladesh forward.</p>
+    <div class="cta-actions"><a href="volunteer.html" class="btn btn-white btn-lg" id="act-cta-vol">Volunteer Now</a><a href="contact.html" class="btn btn-secondary btn-lg" id="act-cta-con">Partner With Us</a></div>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><img src="assets/images/agrapathik_logo.jpeg" alt="Agrapathik Logo" class="footer-logo-img"><span class="footer-logo-text">Agrapathik</span></div><p>Pioneers of community-driven change across Bangladesh.</p><div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61574948495130" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.56 0 .25 5.3.25 11.82c0 2.08.54 4.11 1.57 5.9L0 24l6.46-1.7a11.8 11.8 0 0 0 5.61 1.43h.01c6.51 0 11.82-5.3 11.82-11.82 0-3.16-1.23-6.13-3.38-8.43z"/><path d="M8.44 6.92c-.22-.5-.45-.51-.65-.52h-.56c-.2 0-.52.08-.79.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.08 3.34 5.14 4.54 2.54 1 3.06.8 3.61.75.55-.05 1.78-.73 2.03-1.44.25-.71.25-1.31.17-1.44-.07-.13-.27-.2-.57-.35-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.51-1.79-1.69-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.7-.96-2.32z"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><nav class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="activities.html">Activities</a><a href="events.html">Events</a><a href="volunteer.html">Volunteer</a><a href="contact.html">Contact</a></nav></div>
+      <div class="footer-col"><h4>Programs</h4><nav class="footer-links"><a href="activities.html">City Cleanup</a><a href="activities.html">Tree Planting</a><a href="activities.html">Education Centers</a><a href="activities.html">Food Distribution</a><a href="activities.html">Health Camps</a></nav></div>
+      <div class="footer-newsletter"><h4>Stay Updated</h4><p>Get the latest news and impact reports in your inbox.</p><form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email" /><button type="submit" class="newsletter-btn">Subscribe</button></form></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Agrapathik. Built for Bangladesh.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="js/main.js"></script>
+</body>
+</html>
