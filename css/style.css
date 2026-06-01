@@ -800,8 +800,11 @@ h1, h2, h3, h4, h5 { line-height: 1.2; font-weight: 700; }
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--green-300) transparent;
+  /* Use scrollbar-width only when supported (avoids compatibility warnings in browsers that don't support it) */
+  @supports (scrollbar-width: thin) {
+    scrollbar-width: thin;
+    scrollbar-color: var(--green-300) transparent;
+  }
   padding: 2px 48px 12px;
 }
 
