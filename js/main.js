@@ -191,6 +191,83 @@ function initForms() {
   });
 }
 
+function updateActivityGalleryControls(gallery) {
+  const grid = gallery?.querySelector('.activity-gallery-grid');
+  const prev = gallery?.querySelector('.activity-gallery-arrow-prev');
+  const next = gallery?.querySelector('.activity-gallery-arrow-next');
+  if (!grid || !prev || !next) return;
+
+  const maxScroll = grid.scrollWidth - grid.clientWidth;
+  const hasOverflow = maxScroll > 2;
+
+  prev.hidden = !hasOverflow;
+  next.hidden = !hasOverflow;
+  prev.disabled = !hasOverflow || grid.scrollLeft <= 2;
+  next.disabled = !hasOverflow || grid.scrollLeft >= maxScroll - 2;
+}
+
+function initActivityGalleryScrollControls() {
+  const galleries = document.querySelectorAll('.activity-gallery');
+  if (!galleries.length) return;
+
+  const arrowIcons = {
+    prev: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>',
+    next: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>'
+  };
+
+  galleries.forEach(gallery => {
+    const grid = gallery.querySelector('.activity-gallery-grid');
+    if (!grid) return;
+
+    if (!gallery.querySelector('.activity-gallery-arrow-prev')) {
+      const prev = document.createElement('button');
+      prev.className = 'activity-gallery-arrow activity-gallery-arrow-prev';
+      prev.type = 'button';
+      prev.setAttribute('aria-label', 'Scroll gallery left');
+      prev.innerHTML = arrowIcons.prev;
+      gallery.appendChild(prev);
+    }
+
+    if (!gallery.querySelector('.activity-gallery-arrow-next')) {
+      const next = document.createElement('button');
+      next.className = 'activity-gallery-arrow activity-gallery-arrow-next';
+      next.type = 'button';
+      next.setAttribute('aria-label', 'Scroll gallery right');
+      next.innerHTML = arrowIcons.next;
+      gallery.appendChild(next);
+    }
+
+    gallery.querySelectorAll('.activity-gallery-arrow').forEach(arrow => {
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const direction = arrow.classList.contains('activity-gallery-arrow-next') ? 1 : -1;
+        grid.scrollBy({
+          left: direction * grid.clientWidth * 0.85,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    let ticking = false;
+    grid.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        updateActivityGalleryControls(gallery);
+        ticking = false;
+      });
+    });
+
+    updateActivityGalleryControls(gallery);
+  });
+
+  window.addEventListener('resize', () => {
+    galleries.forEach(updateActivityGalleryControls);
+  });
+}
+
 function setActivityCardState(card, isOpen) {
   const toggle = card.querySelector('.activity-card-toggle');
   const gallery = card.querySelector('.activity-gallery');
@@ -198,6 +275,10 @@ function setActivityCardState(card, isOpen) {
   card.classList.toggle('is-open', isOpen);
   toggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   gallery?.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+
+  if (isOpen) {
+    requestAnimationFrame(() => updateActivityGalleryControls(gallery));
+  }
 }
 
 function scrollActivityCardIntoView(card) {
@@ -211,6 +292,8 @@ function scrollActivityCardIntoView(card) {
 function initActivityGalleries() {
   const cards = document.querySelectorAll('.activity-card');
   if (!cards.length) return;
+
+  initActivityGalleryScrollControls();
 
   const closeAll = () => {
     cards.forEach(card => setActivityCardState(card, false));
