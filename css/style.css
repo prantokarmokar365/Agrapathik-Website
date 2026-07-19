@@ -989,6 +989,112 @@ textarea.form-control {
   border-color: var(--green-300);
 }
 
+.event-full-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.event-full-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--green-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.event-full-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-200);
+  box-shadow: var(--shadow-xl);
+}
+
+.event-full-img {
+  position: relative;
+  min-height: 240px;
+}
+
+.event-full-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-status {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-upcoming {
+  background: rgba(105, 115, 80, 0.14);
+  color: var(--green-700);
+}
+
+.event-full-body {
+  padding: 32px;
+}
+
+.event-full-type {
+  margin-bottom: 8px;
+  color: var(--green-600);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.event-full-title {
+  margin-bottom: 12px;
+  color: var(--dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.event-full-desc {
+  margin-bottom: 20px;
+  color: var(--gray-500);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.event-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.event-detail-chip {
+  padding: 10px 14px;
+  background: var(--green-50);
+  border-radius: 10px;
+}
+
+.event-detail-chip-label {
+  margin-bottom: 3px;
+  color: var(--gray-400);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.event-detail-chip-val {
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .event-date-box {
   display: flex;
   flex-direction: column;
@@ -2116,6 +2222,9 @@ textarea.form-control {
   .gallery-item:nth-child(4) { grid-column: span 1; }
   .gallery-item:nth-child(1) img,
   .gallery-item:nth-child(4) img { height: 260px; }
+  .event-full-card { grid-template-columns: 1fr; }
+  .event-full-img { height: 220px; }
+  .event-details-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 700px) {
@@ -2163,6 +2272,7 @@ textarea.form-control {
   .stat-item { border-right: none; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .cta-actions { flex-direction: column; }
+  .event-details-grid { grid-template-columns: 1fr; }
   .activity-gallery-grid { padding-inline: 38px; }
   .activity-gallery-item { flex-basis: 100%; min-width: 0; }
   .activity-gallery-arrow { width: 34px; height: 34px; }
